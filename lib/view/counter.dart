@@ -1,4 +1,4 @@
-import 'package:counter_provider/model/model.dart';
+import 'package:counter_provider/model/counter.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -14,11 +14,13 @@ class _CounterHomeState extends State<CounterHome> {
   Widget build(BuildContext context) {
     var counter = Provider.of<Counter>(context);
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor:const Color.fromARGB(255, 159, 241, 233),
       appBar: AppBar(
-        title: const Text('Counter Provider'),
-        backgroundColor: Colors.orange,
-        foregroundColor: Colors.teal,
+        title: const Text('Counter Provider',style: TextStyle(fontSize: 35,fontWeight: FontWeight.w900),),
+        foregroundColor:
+         Colors.orange,
+        backgroundColor:
+         Colors.teal,
       ),
       body: Center(
         child: Padding(
@@ -34,7 +36,7 @@ class _CounterHomeState extends State<CounterHome> {
                 return Text(
                   '${counter.count}',
                   style: const TextStyle(
-                      color: Colors.teal,
+                      color: Colors.orange,
                       fontSize: 60,
                       fontWeight: FontWeight.w900),
                 );
