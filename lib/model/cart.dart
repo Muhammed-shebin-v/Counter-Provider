@@ -1,9 +1,9 @@
-import 'package:flutter/material.dart';
+// import 'package:flutter/material.dart';
 
-class CartProvider with ChangeNotifier{
-  final List<Products> _items=[];
+// class CartProvider with ChangeNotifier{
+//   final List<Products> _items=[];
 
-  List<Products> get items=>_items;
+//   List<Products> get items=>_items;
 
-  void add(Product)
-}
+//   void add(Product)
+// }

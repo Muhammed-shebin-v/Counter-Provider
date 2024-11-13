@@ -1,6 +1,5 @@
 import 'package:counter_provider/model/counter.dart';
 import 'package:counter_provider/model/hide.dart';
-import 'package:counter_provider/view/counter.dart';
 import 'package:counter_provider/view/hide.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -12,11 +11,11 @@ void main(){
      ChangeNotifierProvider(create: (_)=> Counter()),
      ChangeNotifierProvider(create: (_)=> Hide()),
     ],
-      child:const CounterProvider())
+      child:const MyApp())
   );
 }
-class CounterProvider extends StatelessWidget {
-  const CounterProvider({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
