@@ -1,6 +1,6 @@
 import 'package:counter_provider/model/counter.dart';
 import 'package:counter_provider/model/hide.dart';
-import 'package:counter_provider/view/hide.dart';
+import 'package:counter_provider/view/counter.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Counter Provider',
       theme:ThemeData(primaryColor:Colors.white) ,
-      home: const Hider(),
+      home:  CounterHome(),
     );
   }
 }
