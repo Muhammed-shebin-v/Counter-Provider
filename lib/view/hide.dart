@@ -13,22 +13,25 @@ class Hider extends StatefulWidget {
 class _HideState extends State<Hider> {
   @override
   Widget build(BuildContext context) {
-  var hidevalue = Provider.of<Hide>(context);
-    return  Scaffold(
+    var hidevalue = Provider.of<Hide>(context);
+    return Scaffold(
       body: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Visibility(
-              visible: hidevalue.hide,
-              child: const Text('hello everyone',style: TextStyle(fontSize: 30),)),
+                visible: hidevalue.hide,
+                child: const Text(
+                  'hello everyone',
+                  style: TextStyle(fontSize: 30),
+                )),
             const Gap(30),
             ElevatedButton(
-              onPressed: (){
-                hidevalue.changeValue();
-              }, 
-              child: const Icon(Icons.add))
+                onPressed: () {
+                  hidevalue.changeValue();
+                },
+                child: const Icon(Icons.add))
           ],
         ),
       ),

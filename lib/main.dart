@@ -4,16 +4,13 @@ import 'package:counter_provider/view/counter.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-void main(){
-  runApp(
-    MultiProvider(
-    providers: [
-     ChangeNotifierProvider(create: (_)=> Counter()),
-     ChangeNotifierProvider(create: (_)=> Hide()),
-    ],
-      child:const MyApp())
-  );
+void main() {
+  runApp(MultiProvider(providers: [
+    ChangeNotifierProvider(create: (_) => Counter()),
+    ChangeNotifierProvider(create: (_) => Hide()),
+  ], child: const MyApp()));
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -22,8 +19,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Counter Provider',
-      theme:ThemeData(primaryColor:Colors.white) ,
-      home:  CounterHome(),
+      theme: ThemeData(primaryColor: Colors.white),
+      home: const CounterHome(),
     );
   }
 }

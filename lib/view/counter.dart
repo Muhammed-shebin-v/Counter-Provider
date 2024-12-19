@@ -14,13 +14,14 @@ class _CounterHomeState extends State<CounterHome> {
   Widget build(BuildContext context) {
     var counter = Provider.of<Counter>(context);
     return Scaffold(
-      backgroundColor:const Color.fromARGB(255, 159, 241, 233),
+      backgroundColor: const Color.fromARGB(255, 159, 241, 233),
       appBar: AppBar(
-        title: const Text('Counter Provider',style: TextStyle(fontSize: 35,fontWeight: FontWeight.w900),),
-        foregroundColor:
-         Colors.orange,
-        backgroundColor:
-         Colors.teal,
+        title: const Text(
+          'Counter Provider',
+          style: TextStyle(fontSize: 35, fontWeight: FontWeight.w900),
+        ),
+        foregroundColor: Colors.orange,
+        backgroundColor: Colors.teal,
       ),
       body: Center(
         child: Padding(
@@ -28,10 +29,11 @@ class _CounterHomeState extends State<CounterHome> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              ElevatedButton(onPressed: () {
-                counter.decrement();
-              }, 
-              child: Icon(Icons.remove)),
+              ElevatedButton(
+                  onPressed: () {
+                    counter.decrement();
+                  },
+                  child: const Icon(Icons.remove)),
               Consumer<Counter>(builder: (context, counter, child) {
                 return Text(
                   '${counter.count}',
@@ -45,7 +47,7 @@ class _CounterHomeState extends State<CounterHome> {
                   onPressed: () {
                     counter.increment();
                   },
-                  child: Icon(
+                  child: const Icon(
                     Icons.add,
                   )),
             ],
